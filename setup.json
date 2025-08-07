@@ -1,0 +1,75 @@
+{
+    "projectName": "Agnovat Support Worker Management System",
+    "techStack": {
+      "backend": "Django 4.x with Django REST Framework",
+      "database": "PostgreSQL",
+      "authentication": "JWT using djangorestframework-simplejwt",
+      "apiDocumentation": "Swagger using drf-yasg",
+      "adminPanel": "Django Admin (for Superuser)"
+    },
+    "modules": [
+      {
+        "name": "users",
+        "description": "Custom user model with role-based access control",
+        "features": [
+          "Extend AbstractUser",
+          "Add `role` field with choices: ['admin', 'worker', 'coordinator', 'practitioner']",
+          "Set `AUTH_USER_MODEL = 'users.User'`"
+        ]
+      },
+      {
+        "name": "authentication",
+        "description": "JWT-based login and registration system",
+        "features": [
+          "User registration endpoint",
+          "User login endpoint (JWT token pair)",
+          "User profile endpoint",
+          "Password change/reset support",
+          "Use djangorestframework-simplejwt for token generation"
+        ]
+      },
+      {
+        "name": "swagger",
+        "description": "Auto-generate interactive API docs",
+        "features": [
+          "Install and configure drf-yasg",
+          "Enable Swagger UI at /swagger/",
+          "Auto-generate docs for all API endpoints"
+        ]
+      },
+      {
+        "name": "admin",
+        "description": "Django admin site for superuser",
+        "features": [
+          "Enable Django admin at /admin/",
+          "Register User model in admin",
+          "Customize UserAdmin to show role and email",
+          "Create superuser to manage users and roles"
+        ]
+      }
+    ],
+    "devSetup": {
+      "useVirtualEnv": true,
+      "useDotEnv": true,
+      "settings": [
+        "CORS_ALLOW_ALL_ORIGINS = True",
+        "REST_FRAMEWORK uses JWT Authentication",
+        "Custom user model is used via AUTH_USER_MODEL"
+      ]
+    },
+    "testing": {
+      "tool": "Swagger UI",
+      "testCases": [
+        "Register a user with role = worker",
+        "Login and retrieve JWT tokens",
+        "Use JWT to access protected /profile/ endpoint",
+        "Test access denied if no token"
+      ]
+    },
+    "output": {
+      "backendStructure": "Django app with users and auth modules",
+      "adminDashboard": "Accessible at /admin/ for superuser",
+      "swaggerDocs": "Accessible at /swagger/ for all endpoints"
+    }
+  }
+  

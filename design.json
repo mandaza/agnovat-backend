@@ -1,0 +1,166 @@
+{
+    "elementStyling": {
+      "layout": {
+        "background": "#F5F3FF",
+        "sidebarBackground": "#FFFFFF",
+        "topbarBackground": "#FFFFFF",
+        "sidebarBorder": "#E5E4F2",
+        "borderRadius": "20px",
+        "shadow": "none"
+      },
+      "cards": {
+        "background": "#FFFFFF",
+        "border": "#E0E0E0",
+        "shadow": "0 8px 16px rgba(133, 131, 163, 0.1)",
+        "borderRadius": "20px",
+        "icons": {
+          "fill": "#6A5ACD",
+          "background": "#F1EFFF"
+        },
+        "text": {
+          "title": "#1E1E2F",
+          "subtitle": "#A5A4B8",
+          "highlight": "#5D5FEF"
+        }
+      },
+      "sidebar": {
+        "background": "#FFFFFF",
+        "activeItemBackground": "#F1EFFF",
+        "activeIconColor": "#5D5FEF",
+        "inactiveIconColor": "#A0A0B2",
+        "hoverBackground": "#F1F1F9",
+        "textColor": "#5D5FEF",
+        "borderRadius": "14px",
+        "iconFill": "#5D5FEF"
+      },
+      "topbar": {
+        "textColor": "#1E1E2F",
+        "iconColor": "#5D5FEF",
+        "badgeColor": "#FF4F64",
+        "profileTextColor": "#7D7D90"
+      },
+      "buttons": {
+        "primary": {
+          "background": "linear-gradient(135deg, #5D5FEF 0%, #867EFF 100%)",
+          "text": "#FFFFFF",
+          "icon": "#FFFFFF",
+          "hover": {
+            "background": "#4A4CD1"
+          },
+          "active": {
+            "background": "#3B3DB3"
+          },
+          "disabled": {
+            "background": "#D8D8E4",
+            "text": "#A0A0B2"
+          },
+          "borderRadius": "12px",
+          "shadow": "0 4px 8px rgba(93, 95, 239, 0.3)"
+        }
+      },
+      "charts": {
+        "barFill": "#B5B3F1",
+        "barHighlight": "#5D5FEF",
+        "labelColor": "#9A9AAB",
+        "axisColor": "#D5D5E5"
+      },
+      "text": {
+        "heading": "#1E1E2F",
+        "subheading": "#7D7D90",
+        "label": "#9A9AAB",
+        "data": "#1E1E2F",
+        "muted": "#B3B3C6"
+      },
+      "icons": {
+        "default": "#5D5FEF",
+        "containerBackground": "#F1EFFF",
+        "shadow": "none"
+      },
+      "budgetChart": {
+        "cafe": "#5D5FEF",
+        "entertainment": "#A586FF",
+        "investments": "#F177C5",
+        "food": "#4FC4F9",
+        "health": "#F7C654",
+        "travel": "#FF9F59"
+      },
+      "savingGoals": {
+        "macbook": "#5D5FEF",
+        "newCar": "#6C88FF",
+        "newHouse": "#D2D2FF",
+        "trackBarBackground": "#F1EFFF"
+      },
+      "shadows": {
+        "card": "0 8px 16px rgba(133, 131, 163, 0.1)",
+        "button": "0 4px 8px rgba(93, 95, 239, 0.3)"
+      },
+      "borderRadius": {
+        "cards": "20px",
+        "buttons": "12px",
+        "icons": "50%",
+        "widgets": "16px"
+      },
+      "states": {
+        "hover": {
+          "sidebarItem": {
+            "background": "#F1EFFF",
+            "iconColor": "#5D5FEF"
+          },
+          "button": {
+            "background": "#4A4CD1"
+          }
+        },
+        "active": {
+          "sidebarItem": {
+            "background": "#E7E6FF",
+            "iconColor": "#5D5FEF"
+          },
+          "button": {
+            "background": "#3B3DB3"
+          }
+        },
+        "disabled": {
+          "button": {
+            "background": "#D8D8E4",
+            "text": "#A0A0B2"
+          }
+        },
+        "focus": {
+          "input": {
+            "outline": "2px solid #5D5FEF"
+          }
+        }
+      }
+    },
+    "visualEffects": {
+      "shadows": {
+        "appliedTo": [
+          "cards",
+          "primary buttons"
+        ]
+      },
+      "gradients": {
+        "appliedTo": [
+          "primary buttons"
+        ],
+        "notAppliedTo": [
+          "cards",
+          "text",
+          "icons"
+        ]
+      },
+      "hoverAnimations": {
+        "sidebarIcons": true,
+        "buttons": true
+      }
+    },
+    "doNotRules": [
+      "DO NOT apply card gradients to icon backgrounds",
+      "DO NOT use button background color for text elements",
+      "DO NOT apply button shadows to card elements",
+      "DO NOT use gradient on cards – use solid white only",
+      "DO NOT apply sidebar active icon color to data icons in dashboard",
+      "DO NOT round border radius more than 20px for cards"
+    ]
+  }
+  
