@@ -29,4 +29,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "tavonga_system.wsgi:application"]
+CMD ["gunicorn", "tavonga_system.wsgi:application", "--bind", "0.0.0.0:$PORT"]
