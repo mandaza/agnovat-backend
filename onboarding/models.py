@@ -113,8 +113,8 @@ class Document(models.Model):
     
     # File Information
     file = models.FileField(upload_to='documents/%Y/%m/%d/')
-    original_filename = models.CharField(max_length=255)
-    file_size = models.IntegerField(help_text="File size in bytes")
+    original_filename = models.CharField(max_length=255, blank=True)
+    file_size = models.IntegerField(help_text="File size in bytes", null=True, blank=True)
     
     # Document Details
     issue_date = models.DateField(null=True, blank=True)
@@ -163,6 +163,13 @@ class Document(models.Model):
         return (self.expiry_date - date.today()).days
     
     def save(self, *args, **kwargs):
+        # Auto-populate file metadata if not set
+        if self.file and not self.original_filename:
+            self.original_filename = self.file.name
+        
+        if self.file and not self.file_size:
+            self.file_size = self.file.size
+        
         # Auto-update status based on expiry
         if self.expiry_date:
             if self.is_expired:
